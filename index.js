@@ -5,7 +5,7 @@ let options={
   //threshold:0.4    //when you callback func is gonna run , like here as u scroll down ,callback func runs only when box is 40% visible and more , and when box is going out of the viewport the callback is fired again when 40% or less of the box is left on the screen
   //threshold:[0.2,0.4,0.6] //if we pass an array callback is called 2 times(coming in  and going out of the viewport) at each of the threshold (in total 6)
 }
-const callback = (entries)=>{
+const callback = (entries,observer)=>{//The callback receives a list of IntersectionObserverEntry objects and the observer:
   console.log(entries[0]);//isIntersecting property is true when viewport intersects the box
 
 }
